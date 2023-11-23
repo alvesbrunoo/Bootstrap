@@ -164,7 +164,7 @@ header > h1 {
     color: white;
     font-size: 3em;
     font-family: var(--font-destaque);
-    margin-bottom: 20px;
+    padding-bottom: 50px;
     text-shadow: 2px 2 px 0px rgba(0, 0, 0, 0.267);
 }
 
