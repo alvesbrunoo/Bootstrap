@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -21,6 +22,20 @@
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+        
+        tbody > tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: lightgray;
         }
 
         .num {
@@ -197,8 +212,19 @@
                     <td id="fundo">Brasil</td>
                     <td class="num" id="fundo2">8 510 295,914</td>
                 </tfoot>
-
         </tbody>
-</table>
+</table> 
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eius illo quam tenetur maiores ullam dolorem rerum, accusamus labore deserunt nostrum amet voluptate molestiae sequi. Iusto maxime quam mollitia magnam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia tempore eaque quisquam nostrum ab laborum sed repudiandae earum accusantium, perspiciatis ea veniam dolorum repellat quam autem. Nobis laboriosam dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit quo blanditiis quae laboriosam fugiat temporibus aliquid, sunt eveniet, voluptate cum, minima eum? Sit dolor voluptatem at aliquid excepturi voluptatum!</p>
+
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe molestias vitae, distinctio odit doloremque at in ab officia, eaque illo voluptates error reiciendis doloribus totam incidunt ut magni dolor quidem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit inventore a perferendis, illum, accusamus ea numquam quibusdam consequatur nostrum natus quam impedit harum porro explicabo deserunt rerum esse, ipsum architecto?</p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum velit veritatis amet animi officia nam, suscipit, cum autem maxime inventore sed! Voluptatem voluptates doloribus provident enim nam inventore vero voluptas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum animi non deleniti illo. Delectus maiores libero neque ex tenetur laudantium eos consectetur itaque molestiae hic. Magni nobis incidunt nihil consequuntur?</p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quasi perspiciatis rerum recusandae ducimus in, nihil ut alias distinctio nemo, assumenda voluptatem. Quasi dolore molestiae voluptates consequatur rem sint facere. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates reiciendis laudantium animi magnam at officiis quo culpa praesentium consequatur, ab hic veritatis corrupti. Explicabo suscipit ea blanditiis nihil aspernatur excepturi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa error quam, ex cum voluptatem voluptatum a incidunt. Ea ipsam, ex eaque necessitatibus, ab a hic doloribus quae corporis nisi aspernatur!</p>
+
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi iste quidem dolorem sapiente expedita aperiam ipsum voluptates quia! Suscipit aperiam odit dolor non modi corporis nisi beatae deleniti voluptatum quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus vel ipsam maiores, sed tempore a ducimus! Velit, laboriosam! Nulla cumque accusantium aut expedita ipsam quasi impedit consequatur sequi molestias temporibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt numquam veritatis consequuntur dicta sequi, tempore dolorum, accusantium perferendis distinctio possimus voluptatem itaque tempora ratione, minima laudantium doloremque culpa similique laborum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea odio sed pariatur iste? Consectetur magnam, quibusdam temporibus a necessitatibus facilis, culpa possimus id maxime suscipit, saepe ullam excepturi voluptate enim.</p>
+
+
 </body>
 </html>
