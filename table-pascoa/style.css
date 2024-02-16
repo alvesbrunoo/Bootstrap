@@ -40,6 +40,25 @@ footer > h2 {
 
 .sabores {
     padding-top: 10px;
+    border: 1px solid black;
+    border-radius: .75rem;
+    height: 23rem;
+    width: 16rem;
+    transform: rotate(-2deg);
+    text-align: center;
+    display: inline-block;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.sabor {
+    padding-top: 10px;
+    border: 1px solid black;
+    border-radius: .75rem;
+    height: 18rem;
+    width: 16rem;
+    transform: rotate(2deg);
+    display: inline-block;
     text-align: center;
 }
 
