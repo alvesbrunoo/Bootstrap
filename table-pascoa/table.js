@@ -1,0 +1,1 @@
+alert("Chica, agradece sua preferência!")
