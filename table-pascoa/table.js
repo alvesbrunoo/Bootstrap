@@ -1,1 +1,0 @@
-alert("Chica doce Ateliê, agradece sua preferência!")
