@@ -1,1 +1,1 @@
-alert("Chica, agradece sua preferência!")
+alert("Chica doce Ateliê, agradece sua preferência!")
