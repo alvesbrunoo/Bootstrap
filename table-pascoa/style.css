@@ -69,6 +69,7 @@ footer > h2 {
 }
 
 footer {
+    margin-top: 20px;
     text-align: center;
     text-shadow: 1px 1px 2px;
     padding-top: 25px;
