@@ -62,14 +62,15 @@ footer > h2 {
     border: 1px solid black;
     border-radius: .75rem;
     height: 18rem;
-    width: 16rem;
+    width: 17rem;
     transform: rotate(2deg);
     display: inline-block;
     text-align: center;
 }
 
 footer {
-    text-shadow: 1px 1px 2px;
     text-align: center;
+    text-shadow: 1px 1px 2px;
     padding-top: 25px;
+    background-color: transparent;
 }
