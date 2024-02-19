@@ -1,12 +1,10 @@
 @charset "UTF-8";
 
-
-
 body {
     background-color: pink;
     background-image: url("https://static.vecteezy.com/system/resources/previews/018/764/737/original/melted-chocolate-background-free-png.png");
     background-size: cover;
-    
+    background-attachment: fixed;
 }
     
 h1 {
@@ -21,7 +19,7 @@ h2 {
     font-family: "Nanum Myeongjo" ,Arial, Helvetica, sans-serif;
 }
 
-p, li {
+p{
     font-family: "Quattrocento", Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0);
 }
