@@ -66,10 +66,11 @@ footer > h2 {
     transform: rotate(2deg);
     display: inline-block;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 2rem;
     text-align: center;
     text-shadow: 1px 1px 2px;
     padding-top: 25px;
