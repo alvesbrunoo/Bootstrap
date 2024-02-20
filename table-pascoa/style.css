@@ -76,3 +76,9 @@ footer {
     display: flex;
     justify-content: center;
 }
+
+#grid-conteiner {
+    display: grid-flex;
+    grid-template-columns: 1fr 1fr;
+} 
+
