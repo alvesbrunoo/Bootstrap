@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+body {
+    background-color: pink;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/018/764/737/original/melted-chocolate-background-free-png.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    text-align: center;
+    display: grid-flex;
+    grid-template-columns: 1fr 1fr;
+}
+    
+article > h1 {
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+    padding-bottom: 40px;
+    text-shadow: 1px 1px 2px;
+    letter-spacing: 2px;
+    color: black;
+}
+    
+h2 {
+    font-family: "Nanum Myeongjo" ,Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: "Quattrocento", Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer > p {
+    letter-spacing: 4px;
+}
+
+footer > h2 {
+    letter-spacing: 2px;
+}
+
+.block {
+    background-color: pink;
+    padding-top: 10px;
+    border: 1px solid black;
+    border-radius: .75rem;
+    height: 23rem;
+    width: 16rem;
+    transform: rotate(-2deg);
+    text-align: center;
+    display: inline-block;
+    padding: 2rem;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.sabor {
+    background-color: pink;
+    padding-top: 10px;
+    border: 1px solid black;
+    border-radius: .75rem;
+    height: 18rem;
+    width: 17rem;
+    transform: rotate(2deg);
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+#grid-conteiner {
+    display: grid-flex;
+    grid-template-columns: 1fr 1fr;
+} 
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px;
+    padding-top: 25px;
+}
