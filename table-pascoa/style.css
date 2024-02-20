@@ -6,6 +6,12 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
+main {
+    text-align: center;
+    display: grid-flex;
+    grid-template-columns: 1fr 1fr;
+}
     
 h1 {
     font-family: "Playfair Display", Arial, Helvetica, sans-serif;
