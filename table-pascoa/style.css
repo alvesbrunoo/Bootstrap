@@ -15,7 +15,8 @@ h1 {
     letter-spacing: 2px;
     color: black;
 }
-    
+
+
 h2 {
     font-family: "Nanum Myeongjo" ,Arial, Helvetica, sans-serif;
 }
@@ -67,6 +68,7 @@ footer > h2 {
     cursor: pointer;
 }
 
+
 footer {
     margin-top: 2rem;
     text-align: center;
@@ -74,10 +76,6 @@ footer {
     padding-top: 25px;
 }
 
-footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
+
 
 
