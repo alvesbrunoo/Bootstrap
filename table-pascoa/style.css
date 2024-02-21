@@ -6,13 +6,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-
-main {
-    text-align: center;
-    display: grid-flex;
-    grid-template-columns: 1fr 1fr;
-}
-    
+ 
 h1 {
     font-family: "Playfair Display", Arial, Helvetica, sans-serif;
     text-align: center;
@@ -78,13 +72,12 @@ footer {
     text-align: center;
     text-shadow: 1px 1px 2px;
     padding-top: 25px;
+}
+
+footer {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-#grid-conteiner {
-    display: grid-flex;
-    grid-template-columns: 1fr 1fr;
-} 
 
