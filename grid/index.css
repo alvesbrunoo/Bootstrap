@@ -1,0 +1,19 @@
+:root {
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+    --bs-body-bg: #212529;
+
+  }
+  .coll {
+    border: 1px solid rgba(var(--bd-violet-rgb), 0.3);
+    text-align: center;
+    background-color: rgba(var(--bd-violet-rgb), 0.15);
+    color: white;
+  }
+
+  body {
+    background-color: var(--bs-body-bg);
+  }
+
+  hr {
+    background-color: white;
+  }
