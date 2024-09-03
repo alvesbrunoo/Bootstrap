@@ -1,108 +1,118 @@
+/* Estilizações gerais */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+h1, h2, h5 {
+    font-weight: bold;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
+p {
+    font-size: 1.1rem;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
+a {
     text-decoration: none;
 }
 
-.hero {
-    background-color: #555;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
+a:hover {
+    text-decoration: underline;
 }
 
-.hero h2 {
-    font-size: 2.5em;
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
 }
 
-.hero p {
-    font-size: 1.2em;
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
 }
 
-.cta-button {
-    display: inline-block;
-    background-color: #ff6600;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+.navbar-nav .nav-link:hover {
+    color: #0056b3;
 }
 
-.products {
-    padding: 20px;
-    text-align: center;
+/* Banner */
+.bg-light {
+    background-color: #e9ecef !important;
+    padding: 60px 0;
 }
 
-.products h2 {
-    font-size: 2em;
+.bg-light h1 {
+    font-size: 2.5rem;
+}
+
+.bg-light p {
+    font-size: 1.3rem;
     margin-bottom: 20px;
 }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+.bg-light .btn-primary {
+    padding: 10px 20px;
+    font-size: 1.2rem;
 }
 
-.product-item {
-    background-color: #fff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+/* Produtos */
+.card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.product-item img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 15px;
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.product-item h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+.card-img-top {
+    border-radius: 8px 8px 0 0;
 }
 
-.about, .contact {
-    padding: 20px;
-    text-align: center;
+.card-title {
+    font-size: 1.3rem;
+    color: #333;
 }
 
-footer {
-    background-color: #333;
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Contato */
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.bg-dark h2, .bg-dark p, .bg-dark h5, .bg-dark label, .bg-dark input, .bg-dark textarea {
     color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+}
+
+.bg-dark .form-control {
+    background-color: #495057;
+    color: #fff;
+    border: 1px solid #6c757d;
+}
+
+.bg-dark .form-control:focus {
+    background-color: #495057;
+    color: #fff;
+    border-color: #007bff;
+    box-shadow: none;
+}
+
+/* Footer */
+footer {
+    background-color: #e9ecef;
+    padding: 15px 0;
+}
+
+footer p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.oculosProduto {
+    width: 300px;
 }

@@ -18,23 +18,12 @@ header {
     padding-bottom: 50px;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-}
 
 image img {
     margin: 0 10px;
 }
 
 
-#espacamentoDasImagens {
-    margin: 0 10px;
-}
 
 footer {
     background-color: black;
@@ -58,5 +47,6 @@ footer {
     width: 300px;
     border: 1px solid black;
 }
+
 
 
