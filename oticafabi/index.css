@@ -1,3 +1,9 @@
+:root {
+    --fonte1: Arial, sans-serif, verdana, helvetica;
+    --fonte2: 'Baskervville SC';
+}
+
+
 /* Estilizações gerais */
 body {
     font-family: 'Arial', sans-serif;
@@ -113,6 +119,16 @@ footer p {
     color: #6c757d;
 }
 
-.oculosProduto {
-    width: 300px;
+img {
+    width: 350px;
+    height: 100px;
 }
+
+#h1produtosOculos {
+    font-family: var(--fonte2);
+}
+
+#h2produtosOculos {
+    font-family: var(--fonte2);
+}
+
