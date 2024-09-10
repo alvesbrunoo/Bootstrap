@@ -6,8 +6,8 @@ document.getElementById("item-form").addEventListener("submit", function(e) {
     const itemQuantity = document.getElementById("item-quantity").value;
 
     // Verifica se os campos estão preenchidos
-    if (itemName === "" || itemQuantity === "") {
-        alert("Preencha todos os campos!");
+    if (itemName === "" || itemQuantity === "" || itemQuantity <= 0) {
+        alert("Preencha todos os campos corretamente!");
         return;
     }
 
@@ -17,8 +17,14 @@ document.getElementById("item-form").addEventListener("submit", function(e) {
 
     newRow.innerHTML = `
         <td>${itemName}</td>
-        <td>${itemQuantity}</td>
-        <td><button class="btn btn-danger btn-sm delete-btn">Remover</button></td>
+        <td class="stock">${itemQuantity}</td>
+        <td>
+            <input type="number" class="form-control sell-quantity" placeholder="Quantidade" min="1">
+        </td>
+        <td>
+            <button class="btn btn-success btn-sm sell-btn">Vender</button>
+            <button class="btn btn-danger btn-sm delete-btn">Remover</button>
+        </td>
     `;
 
     tableBody.appendChild(newRow);
@@ -34,4 +40,41 @@ document.getElementById("item-form").addEventListener("submit", function(e) {
             this.parentElement.parentElement.remove();
         });
     });
+
+    // Adiciona o evento para vender o item
+    const sellButtons = document.querySelectorAll(".sell-btn");
+    sellButtons.forEach((button) => {
+        button.addEventListener("click", function() {
+            const row = this.parentElement.parentElement;
+            const stockCell = row.querySelector(".stock");
+            const sellQuantityInput = row.querySelector(".sell-quantity");
+            const sellQuantity = parseInt(sellQuantityInput.value);
+
+            // Verifica se a quantidade de venda é válida
+            if (isNaN(sellQuantity) || sellQuantity <= 0) {
+                alert("Insira uma quantidade válida para vender.");
+                return;
+            }
+
+            let stock = parseInt(stockCell.innerText);
+
+            if (sellQuantity > stock) {
+                alert("Quantidade de venda excede o estoque disponível!");
+                return;
+            }
+
+            // Subtrai a quantidade vendida do estoque
+            stock -= sellQuantity;
+            stockCell.innerText = stock;
+
+            // Limpa o campo de quantidade para vender
+            sellQuantityInput.value = "";
+
+            // Verifica se o estoque chegou a zero e remove a linha se for o caso
+            if (stock === 0) {
+                row.remove();
+            }
+        });
+    });
 });
+
