@@ -5,7 +5,7 @@ document.getElementById("item-form").addEventListener("submit", function(e) {
     const itemName = document.getElementById("item-name").value;
     const itemQuantity = document.getElementById("item-quantity").value;
 
-    // Verifica se os campos estão preenchidos
+    // Verifica se os campos estão preenchidos corretamente
     if (itemName === "" || itemQuantity === "" || itemQuantity <= 0) {
         alert("Preencha todos os campos corretamente!");
         return;
@@ -16,10 +16,10 @@ document.getElementById("item-form").addEventListener("submit", function(e) {
     const newRow = document.createElement("tr");
 
     newRow.innerHTML = `
-        <td>${itemName}</td>
+        <td class="item-name">${itemName}</td>
         <td class="stock">${itemQuantity}</td>
         <td>
-            <input type="number" class="form-control sell-quantity" placeholder="Quantidade" min="1">
+            <input type="number" class="form-control sell-quantity" placeholder="Quantidade para vender" min="1">
         </td>
         <td>
             <input type="number" class="form-control add-quantity" placeholder="Adicionar Estoque" min="1">
@@ -43,11 +43,11 @@ document.getElementById("item-form").addEventListener("submit", function(e) {
         });
     });
 
-    // Adiciona o evento automático para vender o item quando o usuário aperta "Enter"
+    // Função automática para vender o item quando o usuário aperta "Enter"
     const sellInputs = document.querySelectorAll(".sell-quantity");
     sellInputs.forEach((input) => {
         input.addEventListener("keydown", function(e) {
-            if (e.key === "Enter") { // Verifica se a tecla pressionada foi "Enter"
+            if (e.key === "Enter") {
                 const row = this.parentElement.parentElement;
                 const stockCell = row.querySelector(".stock");
                 const sellQuantity = parseInt(this.value);
@@ -85,11 +85,11 @@ document.getElementById("item-form").addEventListener("submit", function(e) {
         });
     });
 
-    // Adiciona o evento automático para adicionar mais ao estoque
+    // Função automática para adicionar estoque ao apertar "Enter"
     const addInputs = document.querySelectorAll(".add-quantity");
     addInputs.forEach((input) => {
         input.addEventListener("keydown", function(e) {
-            if (e.key === "Enter") { // Verifica se a tecla pressionada foi "Enter"
+            if (e.key === "Enter") {
                 const row = this.parentElement.parentElement;
                 const stockCell = row.querySelector(".stock");
                 const addQuantity = parseInt(this.value);
@@ -117,5 +117,22 @@ document.getElementById("item-form").addEventListener("submit", function(e) {
                 e.preventDefault();
             }
         });
+    });
+});
+
+// Função de pesquisa
+document.getElementById("search-bar").addEventListener("input", function() {
+    const searchValue = this.value.toLowerCase();
+    const rows = document.querySelectorAll("#inventory-table-body tr");
+
+    rows.forEach((row) => {
+        const itemName = row.querySelector(".item-name").innerText.toLowerCase();
+        
+        // Verifica se o nome do item inclui o valor da pesquisa
+        if (itemName.includes(searchValue)) {
+            row.style.display = ""; // Mostra a linha
+        } else {
+            row.style.display = "none"; // Esconde a linha
+        }
     });
 });

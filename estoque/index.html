@@ -11,8 +11,15 @@
     <div class="container mt-5">
         <h1 class="text-center">Sistema de Estoque</h1>
 
-        <!-- Formulário para adicionar itens -->
+        <!-- Barra de pesquisa -->
         <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <input type="text" id="search-bar" class="form-control" placeholder="Pesquisar produto..." onkeyup="searchItem()">
+            </div>
+        </div>
+
+        <!-- Formulário para adicionar itens -->
+        <div class="row mt-4">
             <div class="col-md-6 offset-md-3">
                 <form id="item-form">
                     <div class="form-group">
