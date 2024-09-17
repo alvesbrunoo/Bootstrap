@@ -16,6 +16,7 @@ document.getElementById("item-form").addEventListener("submit", function(e) {
     const newRow = document.createElement("tr");
 
     newRow.innerHTML = `
+        <td class="item-number"></td> <!-- Número da linha -->
         <td class="item-name">${itemName}</td>
         <td class="stock">${itemQuantity}</td>
         <td>
@@ -31,6 +32,9 @@ document.getElementById("item-form").addEventListener("submit", function(e) {
 
     tableBody.appendChild(newRow);
 
+    // Recalcula os números da tabela
+    updateItemNumbers();
+
     // Limpa os campos do formulário
     document.getElementById("item-name").value = "";
     document.getElementById("item-quantity").value = "";
@@ -40,6 +44,7 @@ document.getElementById("item-form").addEventListener("submit", function(e) {
     deleteButtons.forEach((button) => {
         button.addEventListener("click", function() {
             this.parentElement.parentElement.remove();
+            updateItemNumbers(); // Atualiza os números após remover um item
         });
     });
 
@@ -127,12 +132,21 @@ document.getElementById("search-bar").addEventListener("input", function() {
 
     rows.forEach((row) => {
         const itemName = row.querySelector(".item-name").innerText.toLowerCase();
+        const itemNumber = row.querySelector(".item-number").innerText.toLowerCase();
         
-        // Verifica se o nome do item inclui o valor da pesquisa
-        if (itemName.includes(searchValue)) {
+        // Verifica se o nome ou o número do item inclui o valor da pesquisa
+        if (itemName.includes(searchValue) || itemNumber.includes(searchValue)) {
             row.style.display = ""; // Mostra a linha
         } else {
             row.style.display = "none"; // Esconde a linha
         }
     });
 });
+
+// Função para atualizar a numeração dos itens
+function updateItemNumbers() {
+    const rows = document.querySelectorAll("#inventory-table-body tr");
+    rows.forEach((row, index) => {
+        row.querySelector(".item-number").innerText = index + 1;
+    });
+}
